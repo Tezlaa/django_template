@@ -24,7 +24,7 @@ elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
     python -m venv venv
 
     echo "Install requirements..."
-    ./venv/Scripts/activate
+    . venv/Scripts/activate
     python -m pip install --upgrade pip
     pip install -r requirements.txt
 
