@@ -13,7 +13,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     pip install -r requirements.txt
 
     echo "Rename file. Migrate files..."
-    cp .env_copy .env
+    mv .env_copy .env
     cd src/
     python3 manage.py migrate
 
@@ -29,7 +29,7 @@ elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
     pip install -r requirements.txt
 
     echo "Rename file. Migrate files..."
-    cp .env_copy .env
+    mv .env_copy .env
     cd src/
     python manage.py migrate
   
